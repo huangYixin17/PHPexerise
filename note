@@ -49,7 +49,7 @@
       ˙˙˙ 案兩次enter(會出現星號((Deactivate))
 ˙˙˙ exit
 5-1.如何關機虛擬器
-˙˙˙ 指令shotdown -h now
+˙˙˙ 指令shutdown -h now
 
 6.到PC下載VSCode 
    ˙˙˙ 左邊有5個選項,第3個是連上Github的
