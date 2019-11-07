@@ -23,4 +23,34 @@
               ˙˙˙設定root密碼
               ˙˙˙忘記了??(有兩個要設定)
            ˙˙˙下載完成,重新啟動
-  
+              ˙˙˙裝置:(把光碟機的centos取消勾選
+              ˙˙˙輸入:點選del ctrl alt
+   (如果安裝失敗,可以把老師的匯入自己的電腦) 匯入方式:檔案_匯入_無網路產生新的網路卡
+   ˙˙˙也可以將自己的匯出
+      ˙˙˙檔案先關掉
+      ˙˙˙匯出,網路選擇無網路卡
+
+3.安裝完成重新開機,設定的網路選橋接(筆記有記盧NAT根橋接的差別)
+˙˙˙ 進入畫面需要打帳號密碼
+˙˙˙ 利用指令:ip addr show可以知道虛擬機的IP位置
+4.想要利用web的方式看liunx
+˙˙˙ 指令:systemctl enable --now cockpit.socket
+˙˙˙ 指令:systemctl status cockpit.socket
+到WEB打自己虛擬機的IP位置,就可以在WEB上看Liunx的狀況
+
+5.指令打nmtui會出現設定介面
+˙˙˙ 選擇第一個(Edit a connection)
+   ˙˙˙ edit
+       ˙˙˙ IP改手動(輸入自己的IP位置)
+       ˙˙˙Gateway 192.168.1.1
+       ˙˙˙ DNS 8.8.8.8
+       ˙˙˙ OK
+   ˙˙˙ Activate a commection
+      ˙˙˙ 案兩次enter(會出現星號((Deactivate))
+˙˙˙ exit
+
+6.到PC下載VSCode 
+   ˙˙˙ 左邊有5個選項,第3個是連上Github的
+   ˙˙˙ 第五個是下載東西的
+      ˙˙˙ 關鍵字打php 
+      ˙˙˙ 下載php intellisense(php一定要載的),php debug(就是DEGUB),php inteleohnese(語法智能提示),php extension pack,php formatter(排格式)
