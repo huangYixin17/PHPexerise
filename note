@@ -36,4 +36,14 @@
 4.想要利用web的方式看liunx
 ˙˙˙ 指令:systemctl enable --now cockpit.socket
 ˙˙˙ 指令:systemctl status cockpit.socket
-到WEB打自己虛擬機的IP位置,就可以在WEB上用Liunx
+到WEB打自己虛擬機的IP位置,就可以在WEB上看Liunx的狀況
+
+5.指令打nmtui會出現設定介面
+˙˙˙ 選擇第一個(Edit a connection)
+   ˙˙˙ edit
+       ˙˙˙ IP改手動(輸入自己的IP位置)
+       ˙˙˙Gateway 192.168.1.1
+       ˙˙˙ DNS 8.8.8.8
+       ˙˙˙ OK
+   ˙˙˙ Activate a commection
+      ˙˙˙ 案兩次enter(會出現星號((Deactivate))
