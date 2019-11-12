@@ -32,7 +32,7 @@
 
 3.安裝完成重新開機,設定的網路選橋接(筆記有記盧NAT根橋接的差別)
 ˙˙˙ 進入畫面需要打帳號密碼
-˙˙˙ 利用指令:ip addr show可以知道虛擬機的IP位置
+˙˙˙ 利用指令:ip addr show可以知道虛擬機的IP位置 (https://192.168.1.217:9090/)
 4.想要利用web的方式看liunx
 ˙˙˙ 指令:systemctl enable --now cockpit.socket
 ˙˙˙ 指令:systemctl status cockpit.socket
