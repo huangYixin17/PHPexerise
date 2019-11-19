@@ -70,3 +70,8 @@
     ˙˙˙修改
         ˙˙˙ 修改user,group,listen.acl_user,檢查php_admin_value[error_log] = /var/log/php-fpm/www-error.log
             php_admin_flag[log_errors] = on
+ 12.指令:systemctl enable php-fpm
+    指令:systemctl start php-fpm
+    指令:systemctl status php-fpm
+    就完成了,這裡不需要設定防火牆,因為是從php-fpmn送到http/https
+    
