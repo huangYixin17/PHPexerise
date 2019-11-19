@@ -61,3 +61,12 @@
      ˙˙˙ 儲存
      ˙˙˙ 上傳github
  7. 2019/11/19先講權限的東西，就8.30了
+ 
+ 8.安裝 #yum install epel-release 這個要安裝兩次
+        #yum install git
+ 9.安裝nginx完成後(ch2),直接打網址就可以看對不對
+ 10.安裝php(#yum install php php-fpm php-mcrypt php-json php-gd php-mbstring)
+ 11.先cd 到/etc/php-fpm.d
+    ˙˙˙修改
+        ˙˙˙ 修改user,group,listen.acl_user,檢查php_admin_value[error_log] = /var/log/php-fpm/www-error.log
+            php_admin_flag[log_errors] = on
