@@ -72,7 +72,7 @@
     ˙˙˙#systemctl enable --now nginx
     ˙˙˙#firewall-cmd --add-service=http
     ˙˙˙--#firewall-cmd --add-service=http --permanent-- 這行沒有
- 10.安裝php(#yum install php php-fpm php-mcrypt php-json php-gd php-mbstring)
+ 10.安裝php(#yum install php php-fpm --php-mcrypt-- php-json php-gd php-mbstring)
  11.先cd 到/etc/php-fpm.d
     ˙˙˙修改
         ˙˙˙ 修改user,group,listen.acl_user,檢查php_admin_value[error_log] = /var/log/php-fpm/www-error.log
