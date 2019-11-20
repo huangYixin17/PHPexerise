@@ -26,6 +26,7 @@
            ˙˙˙下載完成,重新啟動
               ˙˙˙裝置:(把光碟機的centos取消勾選
               ˙˙˙輸入:點選del ctrl alt
+          ˙˙˙ 關掉電源處儲存資料,將網路卡換成橋接    
    (如果安裝失敗,可以把老師的匯入自己的電腦) 匯入方式:檔案_匯入_無網路產生新的網路卡
    ˙˙˙也可以將自己的匯出
       ˙˙˙檔案先關掉
@@ -35,6 +36,7 @@
 ˙˙˙ 進入畫面需要打帳號密碼
 ˙˙˙ 利用指令:ip addr show可以知道虛擬機的IP位置 (https://192.168.1.217:9090/)
 4.想要利用web的方式看liunx
+˙˙˙ 指令:yum install cockpit
 ˙˙˙ 指令:systemctl enable --now cockpit.socket
 ˙˙˙ 指令:systemctl status cockpit.socket
 到WEB打自己虛擬機的IP位置,就可以在WEB上看Liunx的狀況
@@ -79,4 +81,47 @@
     指令:systemctl start php-fpm
     指令:systemctl status php-fpm
     就完成了,這裡不需要設定防火牆,因為是從php-fpmn送到http/https
-    
+
+13.讓自己的php可以上網站
+   ˙˙˙ cd /etc/nginx
+   ˙˙˙ nano nginx.conf
+   ˙˙˙ 先編輯nginx.conf 把server的{}內所有註解掉,只留include
+   ˙˙˙ cd /ect/nginx/conf.d
+   ˙˙˙ touch default.conf
+   ˙˙˙ nano default.conf
+   ˙˙˙ 編輯 dedault.conf 把nginx內的server內容複製
+-----------------------------------------------------------------------------
+server {
+  listen       80 default_server;
+  listen       [::]:80 default_server;
+  server_name  _;
+  root         /usr/share/nginx/html;
+  location / {
+    index index.php index.html;
+  }
+  location ~ \.php$ {
+    root           /usr/share/nginx/html;
+    try_files $uri = 404;
+    fastcgi_pass unix:/run/php-fpm/www.sock;
+    fastcgi_index  index.php;
+    fastcgi_param  SCRIPT_FILENAME  $document_root$fastcgi_script_name;
+    include        /etc/nginx/fastcgi_params;
+  }
+  error_page 404 /404.html;
+      location = /40x.html {
+  }
+  error_page 500 502 503 504 /50x.html;
+      location = /50x.html {
+  }
+}
+------------------------------------------------------------------------------
+   ˙˙˙ ls /run/php-fpm/www.sock
+   ˙˙˙ mv php-fpm.conf /root
+   ˙˙˙ mv /etc/nginx/dedault.d/php/conf /root
+   ˙˙˙ nginx -t (檢查nginx)
+       ˙˙˙ 顯示OK,Successful就成功
+   ˙˙˙ nginx -s reload
+   ˙˙˙ nano /usr/share/nginx/html/index.php
+      ˙˙˙ 編寫php
+   ˙˙˙ restorecon -Rvv /usr/share/nginx/html
+   
