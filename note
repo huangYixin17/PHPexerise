@@ -71,6 +71,9 @@
     ˙˙˙#yum install nginx
     ˙˙˙#systemctl enable --now nginx
     ˙˙˙#firewall-cmd --add-service=http
+       ˙˙˙ firewall-cmd -runtime-to-permanent 這行是讓firewall儲存在記憶體
+       ˙˙˙ 如果有其他特殊的post 可以獨立設定(ch2)
+    ˙˙˙ 有SELinux 的設定可以去(ch2看)
     ˙˙˙--#firewall-cmd --add-service=http --permanent-- 這行沒有
  10.安裝php(#yum install php php-fpm --php-mcrypt-- php-json php-gd php-mbstring)
  11.先cd 到/etc/php-fpm.d
