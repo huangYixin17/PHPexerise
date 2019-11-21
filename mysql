@@ -1,0 +1,61 @@
+1. 指令: #yum install mysql mysql-server  (安裝mysql)
+   ˙˙˙ 目前版本(8.0)
+2.cd /etc/my/cnd.d
+    ˙˙˙ nano mysql-server.cnf
+       ˙˙˙ 把default-authentication-plugin=mysql_native_password貼上
+3.systemctl enable --now mysqld
+  systemctl start mysqld
+  systemctl status mysqld
+4.設定mysql的密碼
+   ˙˙˙ #mysql_secure_installation
+      ˙˙˙ 進去裡面設定時,案Y 0 Y Y Y Y Y
+   ˙˙˙ 在開mysql的防火牆
+      ˙˙˙ firewall-cmd --add-service=mysql
+      ˙˙˙ firewall-cmd --runtime-to-permanent
+      ˙˙˙ systemctl restart mysqld
+   ˙˙˙ 利用 root 登入 mysql
+      ˙˙˙ #mysql -u root -p
+      ˙˙˙ #show databases;
+5.到phpMyAdmin官網取得檔案(圖形介面來控制linux的mysql,一般是利用#mysql -u root -p,但最後會亂掉自己設定的東西)
+  #cd /usr/share/nginx/html
+     安裝wget   #yum insatll wget
+  #wget https://files.phpmyadmin.net/phpMyAdmin/4.9.1/phpMyAdmin-4.9.1-all-languages.tar.gz
+  
+  解開壓縮檔
+  #tar zxvf phpMyAdmin-4.9.1-all-languages.tar.gz
+  #mv phpMyAdmin-4.9.1-all-languages phpMyAdmin
+  回復SELinux的設定
+  #restorecon -Rvv /usr/share/nginx/html
+  
+  修改phpMyAdmin設定檔
+  #cd phpMyAdmin
+  #cp config.sample.inc.php config.inc.php
+  #nano config.inc.php
+  ˙˙˙ 修改內容 : md5($srcret_string.date("Ymd",time()))
+  
+  因為檔案所有者原本是阿帕契.要改成nginx
+  #chown root:nginx /var/lib/php/session
+  因為開起網站時,有錯誤,回報沒有這個安裝黨,所以要下載
+  #yum insatll php-mysqled
+  重啟php-fpm
+  #systemctl restart php-fpm
+  
+  即可開啟(ip位置/phpMyAdmin)
+
+
+6.建立資料庫內容(ch3)
+   ˙˙˙ #mysql -u root -p
+        >SHOW DATABASES;
+        >CREATE DATABASE cars;
+        >USE cars;
+        >CREATE TABLE customers (
+        >  id INT(11) AUTO_INCREMENT,
+        >  Name VARCHAR(50) NOT NULL,
+        >  Address VARCHAR(255) NULL,
+        >  Phone VARCHAR(10) NULL,
+        >  PRIMARY KEY(id)
+        > ) ENGINE = InnoDB
+        CHARACTER SET = utf8
+        COLLATE = utf8_unicode_ci ;
+   ˙˙˙匯入 
+  
