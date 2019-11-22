@@ -33,8 +33,9 @@
   #nano config.inc.php
   ˙˙˙ 修改內容 : md5($srcret_string.date("Ymd",time()))
   
-  因為檔案所有者原本是阿帕契.要改成nginx
+  因為檔案所有者原本是阿帕契.要改成nginx,還有要把session的權限全部打開
   #chown root:nginx /var/lib/php/session
+  #chmod -R 777
   因為開起網站時,有錯誤,回報沒有這個安裝黨,所以要下載
   #yum insatll php-mysqled
   重啟php-fpm
