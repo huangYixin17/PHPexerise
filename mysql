@@ -44,7 +44,7 @@
   即可開啟(ip位置/phpMyAdmin)
 
 
-6.建立資料庫內容(ch3)
+6.建立資料庫內容格式(ch03)
    ˙˙˙ #mysql -u root -p
         >SHOW DATABASES;
         >CREATE DATABASE cars;
@@ -59,4 +59,8 @@
         CHARACTER SET = utf8
         COLLATE = utf8_unicode_ci ;
    ˙˙˙匯入 
-  
+7.如何新增,更改資料庫,刪除,查詢 
+   ˙˙˙新增
+         >use cars;
+         >insert into custoomers(name,address,)
+      
