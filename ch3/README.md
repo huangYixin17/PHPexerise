@@ -215,7 +215,7 @@
     + 操作範例：
       <pre><code>#mysql -u root -p
       >USE mysql;
-      >REVOKE ALL PRIVILEGES FROM 'peter'@'localhost';
+      >REVOKE ALL ON cars.* FROM 'peter'@'localhost';
       >FLUSH PRIVILEGES;
       </code></pre>
   + 刪除資料庫使用者帳號
