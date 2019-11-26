@@ -255,7 +255,7 @@
   + 檢查 php-fpm 設定檔內容，通常是 www.conf :
     ```md
     (只需修改需要的部份，其他的設定項目保留原狀)
-    #nano /etc/opt/php73/php-fpm.d/www.conf
+    #nano /etc/php-fpm.d/www.conf
       user = nginx
       group = nginx
       listen = /run/php-fpm/www.sock
@@ -265,7 +265,11 @@
       php_admin_flag[log_errors] = on
     ```
   + 啟動 php-fpm 套件
-    <pre><code>#mkdir /var/log/php-fpm
+    <pre><code>#mkdir /var/lib/php/session
+    #chown nginx /var/lib/php/session
+    #mkdir /var/lib/php/wsdlcache
+    #chown nginx /var/lib/php/wsdlcache
+    #mkdir /var/log/php-fpm
     #systemctl enable --now php-fpm</code></pre>
   + 修改 nginx 內的設定，將 /etc/nginx/nginx.conf 的 Server 區段註解 :
     ```md
@@ -322,7 +326,9 @@
     }
     ```
   + 重新啟動 nginx 
-    <pre><code>#nginx -t
+    <pre><code>#mv /etc/nginx/conf.d/php-fpm.conf /root
+    #mv /etc/nginx/default.d/php.conf /root
+    #nginx -t
     #nginx -s reload</code></pre>
   + 佈署網頁至 nginx 網站
     ```php
