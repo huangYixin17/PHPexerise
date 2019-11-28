@@ -232,12 +232,14 @@
     + 操作範例：
       <pre><code>#mysqldump -u root -p --result-file=/tmp/cars.sql cars
       </code></pre>
-
+      <pre><code>#mysqldump -u root -p cars > cars.sql 
+      </code></pre>
   + 還原資料庫
     + 操作範例：
       <pre><code>#mysql -u root -p cars < /tmp/cars.sql
       </code></pre>
-
+      <pre><code>#mysql -u root -p cars < cars.sql
+      </code></pre>
 + 練習使用 phpMyAdmin 完成上述練習
 + 練習使用 MySQL Workbench 完成上述練習
 
