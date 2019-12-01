@@ -62,5 +62,36 @@
 7.如何新增,更改資料庫,刪除,查詢 
    ˙˙˙新增
          >use cars;
-         >insert into custoomers(name,address,)
-      
+         >INSERT INTO customers(Name, Address, Phone)
+         >VALUES('Peter','No. 10, test load','0912345678');
+   ˙˙˙更改
+         >USE cars;
+         >UPDATE customers SET Name = 'James' WHERE Name = 'Peter';
+   ˙˙˙查詢
+         >USE cars;
+         >SELECT * FROM customers WHERE Name = 'James';
+   ˙˙˙刪除
+         >USE cars;
+         >DELETE FROM customers WHERE Name = 'James';
+8.建立資料庫系統的權限
+   ˙˙˙建立資料庫使用者帳號
+      ˙˙˙選擇使用者的名稱
+         >USE mysql;
+         >CREATE USER 'peter'@'localhost' IDENTIFIED BY 'Aa12345678!';
+      ˙˙˙授予權限
+         >USE mysql;
+         >GRANT ALL PRIVILEGES ON cars.* TO 'peter'@'localhost';
+         >FLUSH PRIVILEGES;
+      ˙˙˙利用 REVOKE 取回權限
+         >USE mysql;
+         >REVOKE ALL ON cars.* FROM 'peter'@'localhost';
+         >FLUSH PRIVILEGES;
+      ˙˙˙刪除使用者(drop user)
+         >USE mysql;
+         >DROP USER 'peter'@'localhost';
+         >FLUSH PRIVILEGES;
+9.資料庫備份及還原
+   ˙˙˙備份
+      #mysqldump -u root -p --result-file=/tmp/cars.sql cars
+   ˙˙˙還原
+      #mysql -u root -p cars < /tmp/cars.sql
