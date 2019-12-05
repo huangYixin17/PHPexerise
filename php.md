@@ -8,3 +8,22 @@
 1. 先git
 2. 在虛擬機下指令 (git pull github的資料夾名稱)
 3. 完成
+## 編輯css檔案
+<pre><code>
+'''css
+body{
+    background-color: darkgoldenrod;
+}
+p{
+    color: brown;
+    margin-left: 20px;
+}
+
+button{
+    background: content-box;
+}
+img{
+    width: 50px;
+}
+'''
+</code></pre>
