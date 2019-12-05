@@ -92,7 +92,8 @@
 <li>
 <p>Git 基礎要點</p>
 <ul>
-<li>記錄檔案快照，而不是差異
+<li>
+<p>記錄檔案快照，而不是差異</p>
 <ul>
 <li>
 <p>Git 將檔案儲存，視為小型檔案系統的一組快照（Snapshot）。</p>
@@ -109,14 +110,16 @@
 </li>
 </ul>
 </li>
-<li>大部份的操作皆可在本地端完成
+<li>
+<p>大部份的操作皆可在本地端完成</p>
 <ul>
 <li>大部份 Git 的操作皆只需要本地端的檔案及資源即可完成，通常並不需要網路上其它電腦的資訊。</li>
 <li>想要瀏覽專案的歷史時，Git 不需要到伺服器下載歷史再顯示，就只需要從本機的資料庫讀取。</li>
 <li>等可連上網路時，再從本機連至伺服器，更新軟體版本！</li>
 </ul>
 </li>
-<li>Git 能檢查完整性
+<li>
+<p>Git 能檢查完整性</p>
 <ul>
 <li>在 Git 中所有的物件在儲存前都會被計算校驗碼（checksum）並以校驗碼參照物件。</li>
 <li>Git 用來計算校驗碼的機制稱為 SHA-1 雜湊演算法。</li>
@@ -124,13 +127,15 @@
 <li>Git 中到處都看到校驗碼，因為校驗碼被 Git 到處使用。</li>
 </ul>
 </li>
-<li>Git 通常只增加資料
+<li>
+<p>Git 通常只增加資料</p>
 <ul>
 <li>當使用 Git 時，幾乎所有的動作都只是增加資料到Git的資料庫。</li>
 <li>只要提交快照到 Git 後，很難會發生遺失的情況!</li>
 </ul>
 </li>
-<li>三種狀態
+<li>
+<p>三種狀態</p>
 <ul>
 <li>
 <p>Git 會把檔案標記為三種主要的狀態：已提交（committed）、已修改（modified）及已預存（staged）。</p>
@@ -165,8 +170,11 @@
 <li>
 <p>初次設定 Git</p>
 <ul>
-<li>Git 附帶一個名為 git config 的工具，讓使用者能夠取得和設定組態參數。</li>
-<li>這些參數被存放在下列三個地方：
+<li>
+<p>Git 附帶一個名為 git config 的工具，讓使用者能夠取得和設定組態參數。</p>
+</li>
+<li>
+<p>這些參數被存放在下列三個地方：</p>
 <ul>
 <li>檔案 /etc/gitconfig：裡面包含該系統所有使用者和使用者倉儲的預設設定。如果傳遞 --system 參數給 git config，就會明確地從這個檔案讀取或寫入設定。</li>
 <li>檔案 ~/.gitconfig、~/.config/git/config：使用者帳號專用的設定。只要傳遞 --global，就會明確地讓 Git 從這個檔案讀取或寫入設定！</li>
@@ -174,7 +182,8 @@
 <li>每個層級的設定皆覆蓋先前的設定，所以在 .git/config 的設定優先權高於在 /etc/gitconfig 裡的設定。</li>
 </ul>
 </li>
-<li>設定識別資料
+<li>
+<p>設定識別資料</p>
 <ul>
 <li>安裝 Git 後首先應該做的事是設定使用者名稱及電子郵件。</li>
 <li>設定指令：(文字介面中的使用方式)<pre><code>$ git config --global user.name "John Doe"
@@ -182,7 +191,8 @@ $ git config --global user.email johndoe@example.com</code></pre>
 </li>
 </ul>
 </li>
-<li>指定編輯器
+<li>
+<p>指定編輯器</p>
 <ul>
 <li>可設定預設的文書編輯器，當 Git 需要使用者輸入訊息時會使用它。</li>
 <li>預設情況下，Git 會使用系統預設的編輯器。</li>
@@ -192,14 +202,16 @@ $ git config --global user.email johndoe@example.com</code></pre>
 　<pre><code>$ git config --global core.editor “‘C:/Program Files(x86)/Notepad++/notepad++.exe’ -multiInst -nosession”</code></pre></li>
 </ul>
 </li>
-<li>檢查讀者的設定
+<li>
+<p>檢查讀者的設定</p>
 <ul>
 <li>使用命令列出 Git 在目前位置能找到的設定值：
 　<pre><code>$ git config --list
 $ git config user.name</code></pre></li>
 </ul>
 </li>
-<li>取得說明文件
+<li>
+<p>取得說明文件</p>
 <ul>
 <li>使用說明文件的方法：
 　<pre><code>$ git help &lt;verb&gt;
@@ -213,13 +225,15 @@ $ git help config</code></pre></li>
 <li>
 <p>取得一個 Git 倉儲</p>
 <ul>
-<li>有兩種主要方法來取得一個 Git 倉儲。
+<li>
+<p>有兩種主要方法來取得一個 Git 倉儲。</p>
 <ul>
 <li>將現有的專案或者資料夾匯入 Git</li>
 <li>從其它伺服器克隆（clone）一份現有的 Git 倉儲。</li>
 </ul>
 </li>
-<li>在現有資料夾中初始化倉儲
+<li>
+<p>在現有資料夾中初始化倉儲</p>
 <ul>
 <li>只需要進入該專案的資料夾並執行：<pre><code>$ git init</code></pre>
 <ul>
@@ -230,7 +244,8 @@ $ git help config</code></pre></li>
 $ git commit -m ‘initial project version’</code></pre></li>
 </ul>
 </li>
-<li>克隆現有的倉儲
+<li>
+<p>克隆現有的倉儲</p>
 <ul>
 <li>取得現有 Git 倉儲的複本:<pre><code>$ git clone &lt;url&gt;</code></pre></li>
 <li>例：<pre><code>$ git clone <a href="https://github.com/libgit2/libgit2">https://github.com/libgit2/libgit2</a> </code></pre>
@@ -246,8 +261,11 @@ $ git commit -m ‘initial project version’</code></pre></li>
 <li>
 <p>紀錄變更到版本庫中</p>
 <ul>
-<li>每當修改檔案到一個想記錄它的階段時，就需要提交（commit）這些變更的快照到版本庫中。</li>
-<li>工作目錄下的每個檔案不外乎兩種狀態：已追蹤、未追蹤。
+<li>
+<p>每當修改檔案到一個想記錄它的階段時，就需要提交（commit）這些變更的快照到版本庫中。</p>
+</li>
+<li>
+<p>工作目錄下的每個檔案不外乎兩種狀態：已追蹤、未追蹤。</p>
 <ul>
 <li>
 <p>「已追蹤」檔案是指那些在上次快照中的檔案：它們的狀態可能是「未修改」、「已修改」、「已預存（staged）」</p>
@@ -264,12 +282,14 @@ $ git commit -m ‘initial project version’</code></pre></li>
 </li>
 </ul>
 </li>
-<li>檢查檔案狀態
+<li>
+<p>檢查檔案狀態</p>
 <ul>
 <li><strong>git status</strong> 命令是用來偵測哪些檔案處在什麼樣的狀態下的主要工具</li>
 </ul>
 </li>
-<li>追蹤新的檔案
+<li>
+<p>追蹤新的檔案</p>
 <ul>
 <li>例：新增一個 README 檔案<pre><code>#git add README
 #git status</code></pre>
@@ -280,7 +300,8 @@ $ git commit -m ‘initial project version’</code></pre></li>
 </li>
 </ul>
 </li>
-<li>忽略不需要的檔案
+<li>
+<p>忽略不需要的檔案</p>
 <ul>
 <li>編寫 .gitignore 檔案，在該檔中列舉符合這些檔名的模式（pattern），可忽略不需提交的檔案！</li>
 <li>編寫 .gitignore 檔案的模式規則如下：
@@ -312,7 +333,8 @@ doc/**/*.pdf</code></pre>
 </li>
 </ul>
 </li>
-<li>檢視已預存及未預存的檔案
+<li>
+<p>檢視已預存及未預存的檔案</p>
 <ul>
 <li><strong>git diff</strong> 可顯示檔案裡的哪些列被加入或刪除
 <ul>
@@ -327,7 +349,8 @@ doc/**/*.pdf</code></pre>
 <li>使用 <strong>git diff --cached</strong> 檢視哪些部分是已預存的（–staged 和 --cached 是同義選項）</li>
 </ul>
 </li>
-<li>提交修改
+<li>
+<p>提交修改</p>
 <ul>
 <li>預存區內的檔案，可以利用指令 <strong>git commit</strong> 開始提交
 <ul>
@@ -343,7 +366,8 @@ doc/**/*.pdf</code></pre>
 </li>
 </ul>
 </li>
-<li>移除檔案
+<li>
+<p>移除檔案</p>
 <ul>
 <li>要從 Git 中刪除一個檔案，需要將它從已追蹤檔案中移除，然後再提交</li>
 <li>例：<pre><code>#rm README
@@ -352,7 +376,8 @@ doc/**/*.pdf</code></pre>
 #git status</code></pre></li>
 </ul>
 </li>
-<li>移動檔案
+<li>
+<p>移動檔案</p>
 <ul>
 <li>Git 可以在檔案移動後很聰明地將它們找出來</li>
 <li>例：<pre><code>#git mv README <a href="http://README.md">README.md</a>
@@ -384,19 +409,27 @@ doc/**/*.pdf</code></pre>
 <li>
 <p>新增遠端版本庫</p>
 <ul>
-<li>執行 <strong>git remote add &lt;簡稱&gt; &lt;url&gt;</strong> 來新增:<pre><code>#git remote add phpexerise https://github.com/antallen/PHPexerise.git
+<li>
+<p>執行 <strong>git remote add &lt;簡稱&gt; &lt;url&gt;</strong> 來新增:</p>
+<pre><code>#git remote add phpexerise https://github.com/antallen/PHPexerise.git
 #git remote -v
 phpexerise    https://github.com/antallen/PHPexerise.git (fetch)
 phpexerise    https://github.com/antallen/PHPexerise.git (push)
 </code></pre>
 </li>
-<li>從遠端版本庫中取得所有資訊，而這些資訊並不存在於本地端的版本庫中：<pre><code>#git fetch phpexerise
+<li>
+<p>從遠端版本庫中取得所有資訊，而這些資訊並不存在於本地端的版本庫中：</p>
+<pre><code>#git fetch phpexerise
 From https://github.com/antallen/PHPexerise
 * [new branch]      master     -> phpexerise/master
 </code></pre>
 </li>
-<li>這個命令會連到遠端專案，然後從遠端專案中將本地端還沒有的資料全部拉下來</li>
-<li>執行完成後，應該會有遠端版本庫中所有分支的參照（reference）</li>
+<li>
+<p>這個命令會連到遠端專案，然後從遠端專案中將本地端還沒有的資料全部拉下來</p>
+</li>
+<li>
+<p>執行完成後，應該會有遠端版本庫中所有分支的參照（reference）</p>
+</li>
 </ul>
 </li>
 <li>
@@ -807,7 +840,7 @@ his is [an example](http://example.com/ "Title") inline link.
 <p><a href="https://gitbook.tw/">為自己學 Git</a></p>
 </li>
 </ul>
-</div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 26 Nov 2019</p><script>/* eslint-env browser */
+</div></div></div><p style="text-align: center;" class="text-muted">Generated by&nbsp;<a href="https://github.com/danielgtaylor/aglio" class="aglio">aglio</a>&nbsp;on 01 Dec 2019</p><script>/* eslint-env browser */
 /* eslint quotes: [2, "single"] */
 'use strict';
 
