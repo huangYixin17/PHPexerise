@@ -1,6 +1,5 @@
 # 先下載vs code(可從note的第6點看如何安裝以及重點)
-## 打完程式存成 (.html)
-<pre><code>
+## 打完程式儲存 (.html)
 '''html
 <!doctype html>
     <html lang="en">
@@ -25,8 +24,7 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
-'''
-</code></pre>
+    '''
 ## 上傳到github
 1. 從虛擬機打指令(clone資料夾到虛擬機)(指令 git clone github的資料夾名稱)
 2. 可以在pc上打 <ip位置/phpexerise/test1.html>
@@ -52,5 +50,5 @@ button{
 img{
     width: 50px;
 }
-'''
+    '''
 </code></pre>
