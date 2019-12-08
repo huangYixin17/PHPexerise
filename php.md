@@ -37,6 +37,7 @@
 ## 編輯css檔案
 
 <pre><code>
+'''css
 body{
     background-color: darkgoldenrod;
 }
@@ -51,6 +52,8 @@ button{
 img{
     width: 50px;
 }
+'''
 </code></pre>
+
 
 ## 
