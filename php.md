@@ -56,4 +56,5 @@ img{
 </code></pre>
 
 
-## 
+### 編輯php 有錯誤
++ 可以到目錄 /var/log/nginx/error.log 底下看錯誤的地方
