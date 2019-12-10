@@ -2,7 +2,7 @@
  //一維陣列
  $eggbox["土雞"] = 30;
  $eggbox[1] = 100;
- $eggboxp[] = 20;
+ $eggbox[] = 20;
  $drinkbox=["啤酒"=>70,"cola"=>30];
  $foodbox = ['飯糰'=>50];
  echo $eggbox[1];
