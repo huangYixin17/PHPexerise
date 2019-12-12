@@ -25,6 +25,6 @@ function score($i){
     return $j;
 }
 echo name();
-$backscore = score(85);
+$backscore = score(100);
 echo " 成績等級: $backscore";
 ?>
