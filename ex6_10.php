@@ -5,7 +5,7 @@
  $eggbox[] = 20;
  $drinkbox=["啤酒"=>70,"cola"=>30];
  $foodbox = ['飯糰'=>50];
- echo $eggbox[1];
+ echo $eggbox[]:
  echo $drinkbox[1];
  echo $foodbox;
  //二維陣列
