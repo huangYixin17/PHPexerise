@@ -3,6 +3,6 @@
      for($j = 1;$j<10;$j++){
          printf ("%d*%d=%d \t",$i,$j,($i*$j));
     }
-     echo "\n";
+     printf("\n");
  }
 ?>
