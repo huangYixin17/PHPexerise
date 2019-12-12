@@ -37,7 +37,7 @@
 ## 編輯css檔案
 
 <pre><code>
-'''css
+```css
 body{
     background-color: darkgoldenrod;
 }
@@ -52,8 +52,9 @@ button{
 img{
     width: 50px;
 }
-'''
+```
 </code></pre>
+
 
 ## 編輯php的問題
 
@@ -61,6 +62,18 @@ img{
 + 可以到目錄 /var/log/nginx/error.log 底下看錯誤的地方
 
 ### 編輯重點
-+ 在echo "園面積".$name; 時的 . 是代表連接點的意思
+
+<pre><code>
+'''php
+    <\?php
+        define('PI',3.1415926);
+        $circle_area = 3 * 3 * PI;
+        echo "圓面積: ".$circle_area;
+    \?>
+'''
+
+</code></pre>
+
++ 在echo "圓面積".$name; 時的 . 是代表連接點的意思
 + 在設變數時,都要有 $ 錢錢的符號
 + 如果define某的變數,那使用上不需要 $ 的符號
