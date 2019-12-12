@@ -9,3 +9,16 @@ if($i >200){
 }
 
 ?>
+<?php
+$fruit = "Apple";
+switch($fruit){
+    case "apple":
+        echo "這是蘋果";
+        break;
+    case "banana":
+        echo "這是香蕉";
+        break;
+    default:
+        echo "打錯字了嗎?";
+}
+?>
