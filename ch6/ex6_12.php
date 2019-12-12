@@ -1,4 +1,5 @@
 <?php
+/*
 $i = 150;
 if($i >200){
     echo "\$i 大於200";
@@ -9,7 +10,8 @@ if($i >200){
 }
 
 ?>
-<?php
+*/
+
 $fruit = "Apple";
 switch($fruit){
     case "apple":
