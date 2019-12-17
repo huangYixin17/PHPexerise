@@ -14,11 +14,11 @@
             echo "$this->name 跑步中....";
         }
         public function dogBark(){
-            echo "$this->name叫....";
+            echo "$this->name 叫....";
         }
         public function __destruct()
         {
-            echo "$this->name回家了....";
+            echo "$this->name 回家了....";
         }
                 
     }
