@@ -1,5 +1,6 @@
 <?php
-    class dog{
+    include "Bark.php";
+    abstract class dog implements Bark{
         public $name;
         public $color;
         public $style;
@@ -14,7 +15,7 @@
             echo "$this->name 跑步中....";
         }
         public function dogBark(){
-            echo "$this->name 叫....";
+            #抽象化
         }
         public function __destruct()
         {
