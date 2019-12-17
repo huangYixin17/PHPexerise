@@ -2,7 +2,7 @@
     include "dog.php";
 
     class override extends dog{
-        public $size;
+        protected $size;
 
         public function __construct($name,$color,$style,$size)
         {

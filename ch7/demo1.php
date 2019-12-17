@@ -5,7 +5,6 @@
     echo $mydog->color."<br/>";   
     echo $mydog->style."<br/>";
     
-
     echo $mydog->dowork()."<br/>";
     echo $mydog->dogRun()."<br/>";
 
