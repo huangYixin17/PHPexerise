@@ -10,7 +10,7 @@
             $this->size = $size;
         }
         public function dogBark(){
-            echo "狗叫..但小聲";
+            echo "$this->name 叫..但小聲<br/>";
             parent::dogBark();
         }
         
