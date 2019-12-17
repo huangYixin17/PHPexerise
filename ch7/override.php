@@ -9,6 +9,10 @@
             parent::__construct($name,$color,$style);
             $this->size = $size;
         }
+        public function dogBark(){
+            echo "狗叫..但小聲";
+            parent::dogBark();
+        }
         
     }
 
