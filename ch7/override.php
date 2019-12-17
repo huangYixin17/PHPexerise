@@ -11,7 +11,7 @@
         }
         public function dogBark()
         {
-            echo "狗叫...但小聲...";
+            #echo "狗叫...但小聲...";
             parent::dogBark();
         }
     }
