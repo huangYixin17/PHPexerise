@@ -11,7 +11,7 @@
         }
         public function dogBark(){
             echo "$this->name 叫..但小聲<br/>";
-            parent::dogBark();
+            #parent::dogBark();
         }
         
     }
