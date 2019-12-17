@@ -80,7 +80,7 @@ img{
 
 #### class 編輯重點
 <pre><code>
-''' php
+'''php
 <?php
   class dog {
     // 定義 dog 的年紀「屬性」
