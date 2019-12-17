@@ -77,3 +77,32 @@ img{
 + 在echo "圓面積".$name; 時的 . 是代表連接點的意思
 + 在設變數時,都要有 $ 錢錢的符號
 + 如果define某的變數,那使用上不需要 $ 的符號
+
+#### class 編輯重點
+<pre><code>
+''' php
+<?php
+  class dog {
+    // 定義 dog 的年紀「屬性」
+    public $age;
+    // 定義取得 dog 年紀屬性值的「方法」
+    public function getAge(){
+      return $this->age;
+    }
+  }
+?>
+'''
+</code</pre>
++ 在class編輯時,如果想要用(age)就用this來指向
+
+<pre><code>
+'''php
+<?php
+    include "dog.php";
+    $mydog = new dog();
+    $mydog->age = 10;
+    echo "我的狗年紀 : ".$mydog->getAge();
+?>
+'''
+</code></pre>
++ 如果是其他php想要讀取class這個物件的話,需要include class,想要指向class的物件,就要用變數名稱指向,而不是this
