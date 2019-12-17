@@ -5,7 +5,7 @@
         function __call($name, $arg)
         {
             if($name == 'area')
-                switch(count($age)){
+                switch(count($arg)){
                     case 0:return 0;
                     case 1:return self::PI * $arg[0];
                     case 2:return self::PI * $arg[1];
