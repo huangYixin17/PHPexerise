@@ -4,8 +4,9 @@
     echo $mydog->name."<br/>";
     echo $mydog->color."<br/>";   
     echo $mydog->style."<br/>";
-    echo $mydog->age."<br/>";
+    
 
+    echo $mydog->dowork()."<br/>";
     echo $mydog->dogRun()."<br/>";
 
 
