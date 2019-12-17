@@ -90,7 +90,7 @@ img{
         return $this->age;
         }
     }
-    ?>
+    \?>
 '''
 </code</pre>
 + 在class編輯時,如果想要用(age)就用this來指向
@@ -102,7 +102,7 @@ img{
         $mydog = new dog();
         $mydog->age = 10;
         echo "我的狗年紀 : ".$mydog->getAge();
-    ?>
+    \?>
 '''
 </code></pre>
 + 如果是其他php想要讀取class這個物件的話,需要include class,想要指向class的物件,就要用變數名稱指向,而不是this
