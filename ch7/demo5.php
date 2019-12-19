@@ -16,7 +16,7 @@ class Bird extends A{
   }
 }
 class Action{
-  public function actionMove(A $obj)
+  public function actionMove(b $obj)
   {
       $obj->move();
   }
