@@ -1,22 +1,22 @@
 <?php
-abstract class Animal {
+abstract class A {
   public function sleep(){
       echo '睡';
   }
 }
-class Dog extends Animal {
+class Dog extends A {
   public function move(){
       echo '跑';
   }
 }
-class Bird extends Animal{
+class Bird extends A{
   public function move()
   {
       echo '飛';
   }
 }
 class Action{
-  public function actionMove(Animal $obj)
+  public function actionMove(A $obj)
   {
       $obj->move();
   }
@@ -25,6 +25,6 @@ class Action{
 $dog = new Dog();
 $bird = new Bird();
 $action = new Action();
-$action->actionMove($dog);
-$action->actionMove($bird);
+$action->actionMove($Dog);
+$action->actionMove($Bird);
 ?>
