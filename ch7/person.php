@@ -1,7 +1,7 @@
 <?php
   class Person {
       private $sex;
-      public function __set($name, $value){
+      /*public function __set($name, $value){
         
         //限制不可動態產生屬性
         if (isset($this->$name)) {
@@ -9,7 +9,7 @@
         } else {
             return null;
         }
-      }
+      }*/
       // 取得屬性名稱的值
       public function __get($name){
         return $name;
