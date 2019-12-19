@@ -25,6 +25,6 @@ class Action{
 $dog = new Dog();
 $bird = new Bird();
 $action = new Action();
-$action->actionMove($Dog);
-$action->actionMove($Bird);
+$action->actionMove($dog);
+$action->actionMove($bird);
 ?>
