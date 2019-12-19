@@ -1,9 +1,7 @@
 <?php
-    include "Amimal.php";
-    include "dogFromDemo5.php";
-    include "BirdFromDemo5.php";
+    include "Animal.php";
     class Action{
-        public function actionMove(Amimal $obj){
+        public function actionMove(Animal $obj){
             $obj->move();
         }
     }

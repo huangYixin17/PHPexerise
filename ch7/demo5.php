@@ -1,29 +1,10 @@
 <?php
-abstract class A {
-  public function sleep(){
-      echo '睡';
-  }
-}
-class Dog extends A {
-  public function move(){
-      echo '跑';
-  }
-}
-class Bird extends A{
-  public function move()
-  {
-      echo '飛';
-  }
-}
-class Action{
-  public function actionMove(b $obj)
-  {
-      $obj->move();
-  }
-}
+include "ActionFromDemo5.php";
+include "dogFromDemo5.php";
+include "BirdFromDemo5.php";
 
-$dog = new Dog();
-$bird = new Bird();
+$dog = new dogFromDemo5();
+$bird = new BirdFromDemo5();
 $action = new Action();
 $action->actionMove($dog);
 $action->actionMove($bird);
