@@ -16,7 +16,7 @@ class Bird extends Animal{
   }
 }
 class Action{
-  public function actionMove(Animal $obj)
+  public function actionMove($obj)
   {
       $obj->move();
   }
@@ -25,6 +25,6 @@ class Action{
 $dog = new Dog();
 $bird = new Bird();
 $action = new Action();
-$action->actionMove($dog);
-$action->actionMove($bird);
+$action->actionMove($Dog);
+$action->actionMove($Bird);
 ?>
