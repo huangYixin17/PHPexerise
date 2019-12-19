@@ -1,22 +1,22 @@
 <?php
-  abstract class A {
+  abstract class ABC {
   public function sleep(){
       echo '睡';
   }
 }
-class Dog extends A {
+class Dog extends ABC {
   public function move(){
       echo '跑';
   }
 }
-class Bird extends A{
+class Bird extends ABC{
   public function move()
   {
       echo '飛';
   }
 }
 class Action{
-  public function actionMove(A $obj)
+  public function actionMove(ABC $obj)
   {
       $obj->move();
   }
