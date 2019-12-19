@@ -1,4 +1,5 @@
 <?php
     include "MathRate.php";
-    echo MathRate::ComplexRate(1000,0.18,12,3);
+    // :: 代表使用MathRate裡面的function(ComplexRate)
+    echo MathRate::ComplexRate(1000000,0.18,12,8);
 ?>
