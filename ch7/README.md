@@ -359,7 +359,7 @@
     <?php
       include "Bark.php";
       include "Swim.php";
-      class Human implements Bark, Swim{
+      class Human implements Bark, Swim{  //implements是要求物件實現方法的語法
         public function bark(){
           echo "人類叫聲...是在叫什麼啦！！";
         }
