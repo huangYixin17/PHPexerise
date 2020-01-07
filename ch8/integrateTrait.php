@@ -16,5 +16,5 @@
         use HelloWorld;
     }
     $world = new MyHelloWorld();
-    echo $world->sayHello." ".$world->sayWorld();
+    echo $world->sayHello()." ".$world->sayWorld();
 ?>
