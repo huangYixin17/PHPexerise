@@ -5,7 +5,7 @@
         }
     }
     function checkEmail($email){
-        if(!strops($email,"@"))
+        if(!strpos($email,"@")){}
             throw new EmailFormatException("E-mail需要包含'@'");
     }
     try{
