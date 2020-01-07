@@ -198,13 +198,52 @@
 + HTTP 資料傳遞
 + HTTP 標頭與回應
 #### MVC 概念
-
++ MVC (Model-View-Controller)概念
 #### Laravel 的 Router 模組
++ Laravel Routing簡介
++ Laravel Routing 語法
++ 路由參數傳遞
++ 使用路由群組
++ 路由命名
++ 路由表的查詢
 #### 參考文獻
 
 ### 第十一章 Laravel 的ＭＶＣ II [內容](ch11/README.md)
 #### Controller 的使用
++ Controller 的用途
++ 建立 Controller
++ 由 Route 轉發要求給 Controller
++ 路由可以指定 Controller 處理七種不同要求
++ Controller 命名空間
 #### View 與 Blade 的使用
++ Laravel 的網頁根目錄
++ Laravel 的 View 目錄
++ 基本使用 View 的方式
++ Blade 樣板引擎
++ Blade 語法
++ Blade 樣板實作
+#### 參考文獻
+
+### 第十二章 Laravel 與資料庫的結合 [內容](ch12/README.md)
+#### 基本資料庫連線與操作
++ 連接資料庫的設定方式
++ 利用 MVC 連接資料庫
++ 其他的 SQL 語法使用方式
+#### 使用 Migration 操作資料庫物件
++ Migration 用途
++ Migration 初始化
++ 建立 Migration
++ 操作 Migration 指令
++ Schema 類別
++ Blueprint 操作資料表方法
+#### 使用 Eloguent 管理資料庫內容
++ Eloguent 概述
++ Eloguent 建立過程
++ Eloquent 中 Model 的常見屬性值列表
++ Eloquent 中常見的查詢類方法
++ Eloquent 資料取出的方法
++ Collection 物件的方法
++ 
 #### 參考文獻
 
 #### 參考書籍
