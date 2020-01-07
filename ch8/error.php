@@ -5,5 +5,5 @@ function my_error_handler($error_no, $error_msg) {
   echo "Error Description: [$error_msg]";
 }
 set_error_handler("my_error_handler");
-echo (5 / 0);
+echo (4 / 0);
 ?>
