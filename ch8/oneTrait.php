@@ -15,4 +15,5 @@
     }
     $o = new MyHelloWorld();
     $o->sayHello();
+    $o->sayWorld();
 ?>
