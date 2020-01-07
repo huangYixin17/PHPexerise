@@ -1,4 +1,5 @@
 <?php
+#執行結果:Hello World
     trait Hello{
         function sayHello(){
             return "Hello";
