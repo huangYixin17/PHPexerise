@@ -24,5 +24,7 @@
             return "World";
         }
     }
+    $h = new HelloWorld();
+    $h->sayHelloWorld();
     
 ?>
