@@ -11,7 +11,8 @@
             echo $this->sayHello() . " " .$this->sayWorld(); 
         }
         function sayBaseWorld(){
-            echo $this->sayHello() . " " . parent::sayWorld(); 
+            //這裡的sayWorld會跟class Base做連結
+            echo $this->sayHello() . " " . parent::sayWorld();  
         }
     }
     class Base{
