@@ -27,5 +27,6 @@
     }
     $h = new HelloWorld();
     $h->sayHelloWorld();
-    
+    $h->sayBaseWorld();
+    $h->sayWorld();
 ?>
