@@ -14,6 +14,6 @@
         use SayWorld;
     }
     $o = new MyHelloWorld();
-    $o->sayHello();
-    $o->sayWorld();
+    $o->sayHello();  //執行結果:Hello
+    $o->sayWorld();  //執行結果:Hello World!
 ?>
