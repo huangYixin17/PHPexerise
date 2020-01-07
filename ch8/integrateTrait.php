@@ -12,7 +12,7 @@
     trait HelloWorld{    
         use Hello,World;
     }
-    trait MyHelloWorld {
+    class MyHelloWorld {
         use HelloWorld;
     }
     $world = new MyHelloWorld();
