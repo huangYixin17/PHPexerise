@@ -95,3 +95,10 @@
       #mysqldump -u root -p --result-file=/tmp/cars.sql cars
    ˙˙˙還原
       #mysql -u root -p cars < /tmp/cars.sql
+10.安裝Composer 
+   詳細去看CH8
+   ˙˙˙# yum install wget
+      # cd /usr/share/nginx/html
+      # wget https://getcomposer.org/installer -O composer-installer.php
+      # php composer-installer.php --filename=composer --install-dir=/usr/local/bin
+      # composer --version
