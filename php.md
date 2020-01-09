@@ -81,8 +81,6 @@ img{
 
 
 ### class 編輯重點
-
-
 <pre><code>
 '''php
     <\?php
@@ -97,7 +95,8 @@ img{
     \?>
 '''
 
-</code</pre>
+</code></pre>
+
 
 ### 在class編輯時,如果想要用(age)就用this來指向
 
