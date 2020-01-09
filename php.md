@@ -79,6 +79,7 @@ img{
 + 如果define某的變數,那使用上不需要 $ 的符號
 
 #### class 編輯重點
+
 <pre><code>
 '''php
     <\?php
