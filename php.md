@@ -111,7 +111,22 @@ img{
 
 ## 安裝composer
 1.  + 先在pc下載php
-    +先在pc下載composer
-    +把檔案放在C:\
+    + 先在pc下載composer
+    + 把檔案放在C:\
 2. 在電腦的內容開啟"進階系統設定"
-    +把開環境變數
+    + 打開環境變數
+        + 找path
+            + 複製: C:\composer;C:\php; (主要看php跟composer檔案放哪裡)
+3. 確認是否設定成功
+    + 打開命令提示
+        + 輸入 php -version
+        + 輸入 composer
+
+## 如何用laravel
+1. 先在github上新增一個專案(PHPproject)
+2. 在(cmd)輸入 composer create-project --prefer-dist laravel/laravel PHPproject
+    + 是為了新增一個檔案在C:\
+3.  + 在(cmd)輸入git add .
+    + git commit -m "commit"
+    + 輸入自己在github的位置
+    + git push -u origin master
