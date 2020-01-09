@@ -99,7 +99,7 @@ img{
 
 </code</pre>
 
-+ 在class編輯時,如果想要用(age)就用this來指向
+### 在class編輯時,如果想要用(age)就用this來指向
 
 <pre><code>
 '''php
