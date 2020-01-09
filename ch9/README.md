@@ -149,8 +149,8 @@
     + 注意一下目錄權限設定
       ```bash
       # chown -R nginx ../PHPproject
-      # semanage fcontext -a -t httpd_sys_rw_content_t "/usr/share/nginx/html/PHPexerise/PHPproject/storage(/.*)?"
-      # semanage fcontext -a -t httpd_sys_rw_content_t "/usr/share/nginx/html/PHPexerise/PHPproject/resources(/.*)?"
+      # semanage fcontext -a -t httpd_sys_rw_content_t "/usr/share/nginx/html/PHPproject/storage(/.*)?"
+      # semanage fcontext -a -t httpd_sys_rw_content_t "/usr/share/nginx/html/PHPproject/resources(/.*)?"
       # restorecon -Rvv ../PHPproject
       ```
     + 設定 .env 檔案
