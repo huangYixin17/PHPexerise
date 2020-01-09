@@ -98,7 +98,7 @@ img{
 </code></pre>
 
 
-### 在class編輯時,如果想要用(age)就用this來指向
++ 在class編輯時,如果想要用(age)就用this來指向
 
 <pre><code>
 '''php
@@ -113,6 +113,7 @@ img{
 
 + 如果是其他php想要讀取class這個物件的話,需要include class,想要指向class的物件,就要用變數名稱指向,而不是this
 
+# 以下為CH9
 ## 安裝composer
 1.  + 先在pc下載php
     + 先在pc下載composer
@@ -134,3 +135,15 @@ img{
     + git commit -m "commit"
     + 輸入自己在github的位置
     + git push -u origin master
+
+## 將PHPproject弄上虛擬機
+1. 打開虛擬機
+2. cd /usr/share/nginx/html
+3. git clone 自己的git連結
+
+## 在虛擬機安裝composer
++ yum install php-xml rsyslog
++ systemctl start rsyslog
++ systemctl restart php-fpm
++ cd PHPproject
++ composer install
