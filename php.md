@@ -37,7 +37,7 @@
 ## 編輯css檔案
 
 <pre><code>
-```css
+'''css
 body{
     background-color: darkgoldenrod;
 }
@@ -52,7 +52,7 @@ button{
 img{
     width: 50px;
 }
-```
+'''
 </code></pre>
 
 
@@ -78,7 +78,11 @@ img{
 + 在設變數時,都要有 $ 錢錢的符號
 + 如果define某的變數,那使用上不需要 $ 的符號
 
+<<<<<<< HEAD
 #### class 編輯重點
+=======
+### class 編輯重點
+>>>>>>> d57dc1e1dbe4f4162f3c32f97274ddb2d0595182
 
 <pre><code>
 '''php
@@ -93,6 +97,7 @@ img{
         }
     \?>
 '''
+
 </code</pre>
 
 + 在class編輯時,如果想要用(age)就用this來指向
