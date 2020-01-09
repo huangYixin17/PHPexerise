@@ -242,7 +242,6 @@
     + 依據需求，重複利用相同程式碼，做出功能不同的程式！
     + 子類別繼承父類別的屬性與方法，免去定義相同功能！
     + 必要時，子類別除了可以定義自己的屬性與方法，也可改寫父類別的屬性與方法！
-    + 程式繼承dog.php,但由於自己的Shepherd有自己的解建構子,所以不會再執行dog.php的解建構子
   + 語法 :
     ```php
     class 子類別名稱 extends 父類別名稱 {
@@ -359,7 +358,7 @@
     <?php
       include "Bark.php";
       include "Swim.php";
-      class Human implements Bark, Swim{  //implements是要求物件實現方法的語法
+      class Human implements Bark, Swim{
         public function bark(){
           echo "人類叫聲...是在叫什麼啦！！";
         }
