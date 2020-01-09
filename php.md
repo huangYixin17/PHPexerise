@@ -108,3 +108,10 @@ img{
 </code></pre>
 
 + 如果是其他php想要讀取class這個物件的話,需要include class,想要指向class的物件,就要用變數名稱指向,而不是this
+
+## 安裝composer
+1.  + 先在pc下載php
+    +先在pc下載composer
+    +把檔案放在C:\
+2. 在電腦的內容開啟"進階系統設定"
+    +把開環境變數
