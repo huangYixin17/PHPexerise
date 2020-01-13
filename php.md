@@ -141,7 +141,7 @@ img{
 2. cd /usr/share/nginx/html
 3. git clone 自己的git連結
 
-## 在虛擬機安裝composer
+## 在虛擬機安裝composer(ch9)
 + yum install php-xml rsyslog
 + systemctl start rsyslog
 + systemctl restart php-fpm
