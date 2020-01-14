@@ -129,3 +129,5 @@ server {
       ˙˙˙ 編寫php
    ˙˙˙ restorecon -Rvv /usr/share/nginx/html
    
+## 如何在linux虛擬機看網路是否運作
++ ping www.hinet.net
