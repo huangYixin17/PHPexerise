@@ -1,7 +1,7 @@
 <?php
 $account = $_POST["account"];
 $password = $_POST["password"];
-if($account != 123){
+if($account != 123 or $password!= 1234){
     echo "帳號或是密碼輸入錯誤!!";
 }
 else{
