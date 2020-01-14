@@ -2,11 +2,9 @@
 $account = $_POST["account"];
 $password = $_POST["password"];
 if($account != 123 or $password!= 1234){
-    echo "帳號或是密碼輸入錯誤!!";
-}
+    echo "<script>alert(‘提示內容’)</script>";
 else{
-    echo "帳號 : ".$account;
-    echo "密碼 : ".$password;
+    echo "登入成功!"
 }
 
 ?>
