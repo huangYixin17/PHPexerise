@@ -153,3 +153,16 @@ img{
 ### 如果設定過nginx,就要重新啟動服務
 + nginx -t
 + nginx -s reload
+
+## CH11
++ 新增controller的兩個檔案
+    + 先在(cmd):php artisan make:controller ProductionController --resource --model=Product
++ 由 Route 轉發要求給 Controller
+    <?php
+    // GET product的要求轉發給ProductController的index方法處理
+    Route::get('product', 'ProductionController@index');
+    // GET product{id}的要求轉發給ProductController的show方法處理，同時會傳遞參數id
+    Route::get('product/{id}', 'ProductionController@show');
+    // POST product的要求轉發給ProductController的store方法處理
+    Route::post('product', 'ProductionController@store');
+    ?>
