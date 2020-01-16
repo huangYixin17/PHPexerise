@@ -1,4 +1,9 @@
-# 先下載vs code(可從note的第6點看如何安裝以及重點)
++ 編輯php 有錯誤
++ 安裝composer
++如何用laravel
++ nginx的重新啟動服務
++ route的controller
+## 先下載vs code(可從note的第6點看如何安裝以及重點)
 ## 打完程式儲存 (.html)
 
     <!doctype html>
