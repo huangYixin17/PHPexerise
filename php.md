@@ -149,3 +149,7 @@ img{
 + systemctl restart php-fpm
 + cd PHPproject
 + composer install
+
+### 如果設定過nginx,就要重新啟動服務
++ nginx -t
++ nginx -s reload
