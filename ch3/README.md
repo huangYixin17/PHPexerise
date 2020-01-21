@@ -1,7 +1,3 @@
-+ 安裝MySQL,phpMyAdmin(在Web上以圖形介面寫資料庫)
-+ 如何整理資料庫(正規化)
-+ MySQL的操作程式
----
 ### 第三章 MySQL 操作與 SQL 語法
 #### 安裝 MySQL 
 + Linux 平台安裝 MySQL Server
