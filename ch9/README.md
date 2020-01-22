@@ -158,7 +158,7 @@
     + 注意一下目錄權限設定
       ```bash
       # chown -R nginx ../PHPproject
-      # semanage fcontext -a -t httpd_sys_rw_content_t "/usr/share/nginx/html/PHPproject/storage(/.*)?"
+      # semanage fcontext -a -t httpd_sys_rw_content_t "/usr/share/nginx/html/PHPproject/storage(/.*)?"  (這裡的專案名稱要跟這自己的改變)
       # semanage fcontext -a -t httpd_sys_rw_content_t "/usr/share/nginx/html/PHPproject/resources(/.*)?"
       # restorecon -Rvv ../PHPproject
       ```
