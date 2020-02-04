@@ -171,3 +171,7 @@ img{
     // POST product的要求轉發給ProductController的store方法處理
     Route::post('product', 'ProductionController@store');
     ?>
+### phpmyadmin 網頁出現錯誤
++ 在linux輸入這兩行(權限的問題)
+cd /var/lib  
+chmod  -R  777 php 
