@@ -131,6 +131,7 @@ img{
     + 打開命令提示
         + 輸入 php -version
         + 輸入 composer
+            - 還要在(cmd)輸入composer install
 
 ## 如何用laravel
 1. 先在github上新增一個專案(PHPproject)
