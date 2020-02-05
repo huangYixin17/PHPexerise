@@ -131,6 +131,7 @@ img{
     + 打開命令提示
         + 輸入 php -version
         + 輸入 composer
+            - 還要在(cmd)輸入composer install
 
 ## 如何用laravel
 1. 先在github上新增一個專案(PHPproject)
@@ -171,6 +172,7 @@ img{
     // POST product的要求轉發給ProductController的store方法處理
     Route::post('product', 'ProductionController@store');
     ?>
+<<<<<<< HEAD
 
 ## 資料庫Migration (20200205)
 1. 可以自己手動新增資料庫(例如:在linux的mysql新增)及內容,會以以下程式碼呼叫
@@ -193,3 +195,9 @@ img{
             }
         }
 </code></pre>
+=======
+### phpmyadmin 網頁出現錯誤
++ 在linux輸入這兩行(權限的問題)
+cd /var/lib  
+chmod  -R  777 php 
+>>>>>>> 112e730202e45818797a9b76e34071f4917961ac
