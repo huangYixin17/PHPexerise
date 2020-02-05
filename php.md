@@ -171,3 +171,25 @@ img{
     // POST product的要求轉發給ProductController的store方法處理
     Route::post('product', 'ProductionController@store');
     ?>
+
+## 資料庫Migration (20200205)
+1. 可以自己手動新增資料庫(例如:在linux的mysql新增)及內容,會以以下程式碼呼叫
+    + 缺點是:跟Migration有衝突,不能並用
+<pre><code>
+    <\?php
+        namespace App\Http\Controllers;
+        use Illuminate\Http\Request;
+        use Illuminate\Support\Facades\DB;
+        use App\Http\Controllers\Controller;
+        use Route;
+        use View;
+        class CarsController extends Controller{
+            //
+            public function index(){
+                $customers = DB::select('select * from customers');
+                // 可綁定參數
+                // $customers = DB::select('select * from customers where Name = :names', ['names' => "Peter"]);
+                return View::make('customers',['customers' => $customers]);
+            }
+        }
+</code></pre>
